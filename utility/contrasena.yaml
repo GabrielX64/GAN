@@ -2,10 +2,16 @@ credentials:
   usernames:
     kitty_24:
       name: Neera Aranguri
-      password: $2b$12$ZHGvpmCqn7Zp0tuBGqom5eGcwggU.mT5I0d0UdwK4CuhptcV7ZZCG # To be replaced with hashed password
+      password: $2b$12$19yKmu/mu8w0HYETlxA96.J2yLnafYaILmYNlPrGteXLpI5yM32uy # To be replaced with hashed password
     GabrielX_64:
       name: Gabriel Cajas
       password: $2b$12$kS1j5Rbn.ZQPNnPyV2hE6u9xDDy.YoIPDUc7CCS3dz9qSPeG0PT2m # To be replaced with hashed password
+    Sebastc10:
+      name: Sebastian Tenorio
+      password: $2b$12$k4x9Wtlnv/YStisTVznH4.Nn3v6B2Y5zEuf8kvyknwNDdMYNsxz.e
+    JonathanA14:
+      name: Jonathan Sueros
+      password: $2b$12$YvqKAZIhCo.1rnRXX2drhu/y6m0j4k9SXpNp72z38YnzB/vVc2yqG
     Matematica:
       name: Todos
       password: $2b$12$fkSDhweaTSVO4EsuDsbw6.Uybvtcaq9Heini0M.XcIEK4HDQuvOcm

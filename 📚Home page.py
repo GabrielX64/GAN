@@ -6,7 +6,9 @@ import yaml
 import streamlit_authenticator as stauth
 from streamlit_extras.switch_page_button import switch_page
 import base64
+import networkx as nx
 
+ 
 APP_TITLE = "TRAVELS' CONEXIONS"
 APP_SUB_TITLE = 'Aquí encontrarás las mejores rutas para tus próximos viajes'
 
@@ -25,6 +27,11 @@ def set_bg(main_bg):
          """,
          unsafe_allow_html=True
       )
+
+def download_button(pdf, filename):
+    b64 = base64.b64encode(pdf).decode('utf-8')
+    href = f'<a href="data:application/octet-stream;base64,{b64}" download="{filename}">Descargar </a>'
+    return href
 
 st.markdown(
         """
@@ -90,5 +97,12 @@ if st.session_state["authentication_status"]:
                 switch_page('Vuelos')
         if pais is not listaPais:
             st.error('No se encuentra ese país')
+    
+    if st.button('Descargar PDF'):
+
+        with open(r'.\mapa\AVIANCA.pdf','rb') as f:
+            pdf=f.read()
+
+        st.markdown(download_button(pdf,'AVIANCA.pdf'),unsafe_allow_html=True)
     
     authenticator.logout('Logout','main')
